@@ -1,0 +1,33 @@
+site_name: CMap SigTool Documentation
+nav:
+  - Home: index.md
+  - Man Pages:
+    - Shared arguments: shared_arguments.md
+    - Connectivity analysis:
+        curie: sig_curie_tool.md
+        gutc: sig_gutc_tool.md
+        gseapreranked: sig_gseapreranked_tool.md
+        introspect: sig_introspect_tool.md
+        queryl1k: sig_queryl1k_tool.md
+        recall: sig_recall_tool.md        
+    - Expression analysis:        
+        marker: sig_marker_tool.md
+        pca: sig_pca_tool.md
+        tsne: sig_tsne_tool.md
+    - Utilities:
+        annotate: sig_annotate_tool.md
+        collate: sig_collate_tool.md        
+        getgenesets: sig_getgenesets_tool.md        
+        score2rank: sig_score2rank_tool.md
+        slice: sig_slice_tool.md        
+        testmlr: sig_testmlr_tool.md
+        trainmlr: sig_trainmlr_tool.md        
+        zscore: sig_zscore_tool.md
+theme:
+  name: material
+  custom_dir: overrides
+  # CMap favicon
+  favicon: img/favicon.ico
+  logo: img/banner-logo.svg
+extra:
+  generator: false  
