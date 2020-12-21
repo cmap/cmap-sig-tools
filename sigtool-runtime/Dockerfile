@@ -1,6 +1,6 @@
 # CMap sigtool-runtime
-# This Dockerfile configures an runtime environment for executing
-# command-line implementations of core Connectivity Map algorithms (sig-tools)
+# This Dockerfile configures a runtime environment for executing
+# command-line implementations of core Connectivity Map algorithms (aka sig-tools)
 # Build using:
 # docker build --no-cache=true --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg BUILD_VERSION="test" -t sigtool-runtime:latest .
 
@@ -14,10 +14,7 @@ ARG MCR_RELEASE='R2014b'
 # MCR version number
 ARG MCR_VERSION_NUM='v84'
 
-#R
-
 ARG VOLUME_PATH="/opt"
-
 # Install location of MCR
 ARG MCR_INSTALL_PATH=${VOLUME_PATH}/mcr
 
@@ -37,8 +34,8 @@ LABEL org.label-schema.name="sigtool-runtime" \
   org.label-schema.vcs-url="https://github.com/cmap/cmap-sig-tools" \
   org.label-schema.schema-version="1.0"
 
-# Copy scripts
-COPY ./assets/* /usr/local/bin
+# Copy sigtool run scripts
+COPY ./assets/* /usr/local/bin/
 
 RUN install_packages \
   wget \
@@ -56,7 +53,7 @@ RUN install_packages \
   vim-tiny \
   procps \
 && mkdir -p /tmp/mcr_installer $MCR_INSTALL_PATH \
-## Download MCR
+## Download and unpack MCR
 && cd /tmp/mcr_installer \
 && echo "Downloading MCR from: $MCR_URL" \
 && wget --no-verbose --no-check-certificate -S "$MCR_URL" -O mcr_installer.zip \
@@ -64,7 +61,7 @@ RUN install_packages \
 ## Install MCR
 && ./install -mode silent -agreeToLicense Yes -destinationFolder "$MCR_INSTALL_PATH" \
 ## set permissions to sig-tool scripts
-chmod +x /usr/local/{run-sigtool,bashtk} \
+chmod +x /usr/local/{run-sigtool,run-matlab,bashtk} \
 ## Cleanup
 && cd / \
 && rm -rf /tmp/* \
@@ -84,4 +81,4 @@ ENV XAPPLRESDIR ${MCR_ROOT}/X11/app-defaults
 
 VOLUME ["$VOLUME_PATH"]
 
-CMD ["bash"]
+CMD ["run-sigtool"]
