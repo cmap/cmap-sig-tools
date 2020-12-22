@@ -1,5 +1,0 @@
-stages:
-  extract_data:
-    cmd: tar pxvf cmap-sigtool-demo.tar.xz
-    deps:
-    - cmap-sigtool-demo.tar.xz
