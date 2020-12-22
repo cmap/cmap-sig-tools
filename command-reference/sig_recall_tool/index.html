@@ -1,0 +1,913 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <meta name="author" content="Connectivity Map">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>recall - CMap SigTool Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sig_recall_tool" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="CMap SigTool Documentation" class="md-header-nav__button md-logo" aria-label="CMap SigTool Documentation">
+      
+  <img src="../../img/banner-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            CMap SigTool Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              recall
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/cmap/cmap-sig-tools" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cmap/cmap-sig-tools
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CMap SigTool Documentation" class="md-nav__button md-logo" aria-label="CMap SigTool Documentation">
+      
+  <img src="../../img/banner-logo.svg" alt="logo">
+
+    </a>
+    CMap SigTool Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/cmap/cmap-sig-tools" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cmap/cmap-sig-tools
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    <label class="md-nav__link" for="nav-2">
+      Command Reference
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Command Reference" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Command Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shared_arguments/" class="md-nav__link">
+      Shared arguments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
+    <label class="md-nav__link" for="nav-2-2">
+      Connectivity analysis
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Connectivity analysis" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Connectivity analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_queryl1k_tool/" class="md-nav__link">
+      queryl1k
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_gseapreranked_tool/" class="md-nav__link">
+      gseapreranked
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_curie_tool/" class="md-nav__link">
+      curie
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_introspect_tool/" class="md-nav__link">
+      introspect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        recall
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      recall
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    Synopsis:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_gutc_tool/" class="md-nav__link">
+      gutc
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+    <label class="md-nav__link" for="nav-2-3">
+      Expression analysis
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Expression analysis" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        Expression analysis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_marker_tool/" class="md-nav__link">
+      marker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_pca_tool/" class="md-nav__link">
+      pca
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_tsne_tool/" class="md-nav__link">
+      tsne
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+    <label class="md-nav__link" for="nav-2-4">
+      Utilities
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_annotate_tool/" class="md-nav__link">
+      annotate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_slice_tool/" class="md-nav__link">
+      slice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_collate_tool/" class="md-nav__link">
+      collate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_getgenesets_tool/" class="md-nav__link">
+      getgenesets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_score2rank_tool/" class="md-nav__link">
+      score2rank
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_testmlr_tool/" class="md-nav__link">
+      testmlr
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_trainmlr_tool/" class="md-nav__link">
+      trainmlr
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sig_zscore_tool/" class="md-nav__link">
+      zscore
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Tutorials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../docker_demo/" class="md-nav__link">
+      Running Dockerized SigTools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    Synopsis:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="sig_recall_tool">sig_recall_tool<a class="headerlink" href="#sig_recall_tool" title="Permanent link">&para;</a></h1>
+<p>Compare replicates signatures to assess similarity</p>
+<h2 id="synopsis">Synopsis:<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p><code>sig_recall_tool</code> [--ds_list DS_LIST] [--metric 
+METRIC] [--set_size SET_SIZE] [--es_tail ES_TAIL] [--dim DIM] [--sample_field 
+SAMPLE_FIELD] [--feature_field FEATURE_FIELD] [--row_filter ROW_FILTER] [--column_filter 
+COLUMN_FILTER] [--save_pw_matrix SAVE_PW_MATRIX] [--recall_group_prefix 
+RECALL_GROUP_PREFIX] [--outlier_alpha OUTLIER_ALPHA] [--fix_ties FIX_TIES]</p>
+<h2 id="arguments">Arguments<a class="headerlink" href="#arguments" title="Permanent link">&para;</a></h2>
+<p><code>--ds_list</code> <em>DS_LIST</em>
+: List of datasets to compare.
+A single replicate set can be specified as a GRP file or cell array listing the 
+full filepath to a dataset per line. Multiple replicate sets can be specified by supplying a TSV text file with the 
+following columns:</p>
+<p><code>group_id</code>: <em>Grouping variable shared by all datasets in a replicate set</em></p>
+<p><code>file_path</code>: <em>Full filepath to a dataset</em></p>
+<p>For example to run recall on two replicate sets A and B use:</p>
+<table>
+<thead>
+<tr>
+<th>group_id</th>
+<th>file_path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>/path/to/DS_A_X1.gct</td>
+</tr>
+<tr>
+<td>A</td>
+<td>/path/to/DS_A_X2.gctx</td>
+</tr>
+<tr>
+<td>A</td>
+<td>/path/to/DS_A_X3.gct</td>
+</tr>
+<tr>
+<td>B</td>
+<td>/path/to/DS_B_X1.gctx</td>
+</tr>
+<tr>
+<td>B</td>
+<td>/path/to/DS_B_X2.gct</td>
+</tr>
+</tbody>
+</table>
+<p>Any replicate set with singleton entries will be ignored. A list of skipped 
+replicate sets is output to a file named ds_skipped.grp </p>
+<p><code>--metric</code> <em>METRIC</em>
+: Similarity metric to use for the comparison. Default is spearman. Options are 
+{spearman|pearson|wtcs|cs|cosine}</p>
+<p><code>--set_size</code> <em>SET_SIZE</em>
+: Set size to use for enrichment metrics. This is ignored for correlation 
+metrics. Default is 50</p>
+<p><code>--es_tail</code> <em>ES_TAIL</em>
+: Specify two-tailed or one-tailed statistic for enrichment metrics. Default is 
+both. Options are {up|down|both}</p>
+<p><code>--dim</code> <em>DIM</em>
+: Dimension to operate on. The default is to compare columns between datasets. If 
+'row' is specified, the features are compared. Default is column. Options are 
+{row|column}</p>
+<p><code>--sample_field</code> <em>SAMPLE_FIELD</em>
+: Column metadata field to use for matching pairs of comparisons. The field 
+should exist in each dataset for the dimension specified. Default is det_well</p>
+<p><code>--feature_field</code> <em>FEATURE_FIELD</em>
+: Row metadata field to use for matching pairs of comparisons. The field should 
+exist in each dataset for the dimension specified. Default is rid</p>
+<p><code>--row_filter</code> <em>ROW_FILTER</em>
+: GMT or GMX file specifying row filter criteria. Dataset rows are filtered prior 
+to recall analysis. See parse_filter for details on the filter format</p>
+<p><code>--column_filter</code> <em>COLUMN_FILTER</em>
+: GMT or GMX file specifying column filter criteria. Dataset columns are filtered 
+prior to recall analysis. See parse_filter for details on the filter format</p>
+<p><code>--save_pw_matrix</code> <em>SAVE_PW_MATRIX</em>
+: If true, saves pairwise similarity matrices in GCTx format for each pair of 
+comparisons.. Default is 0</p>
+<p><code>--recall_group_prefix</code> <em>RECALL_GROUP_PREFIX</em>
+: String if provided is prepended to the recall_group field in the recall report</p>
+<p><code>--outlier_alpha</code> <em>OUTLIER_ALPHA</em>
+: Level of significance, used to flag outlier replicate datasets. Default is 0.01</p>
+<p><code>--fix_ties</code> <em>FIX_TIES</em>
+: Adjusts for ties in the recall score when computing ranks if true. Default is 1</p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>For a grouped collection of datasets (a dataset group), the recall tool 
+computes pairwise similarities between each pair of datasets in the group using 
+the specified metric and dimension. In the case of non-symmetric enrichment 
+metrics (e.g. wtcs) the similarity is assessed in both directions and averaged 
+to ensure that the order of evaluation of matrices does not affect the result. 
+Note that if the dimensions of the input datasets are of different sizes the 
+pairwise similarity matrix will not be square. The recall scores are elements 
+of the pairwise similarity matrix that correspond to matching sample_field 
+metadata values (or feature_field if the dimension is row). Next row and column 
+ranks are computed by ranking elements of similarity matrix both row and 
+column-wise and converted to percentiles (ranging [0, 100] with 0 indicating 
+perfect recall). The recall rank is computed as the average of the row and 
+column percentile ranks for the same elements that correspond to the recall 
+scores.</p>
+<p>The tool produces several outputs, including a summary HTML index page that 
+lists the recall summary for each dataset group in the input. The table links 
+to a gallery of diagnostic plots for each group. In addition the following TSV 
+text reports are generated for each dataset group:</p>
+<ol>
+<li>
+<p>recall_report_pairs.txt : This report provides the most granular level 
+information of the analysis and lists the recall scores and ranks of every pair 
+of profiles compared in addition to the corresponding metadata. The key recall 
+fields are:</p>
+<ul>
+<li><code>recall_group</code> : indicates the pairwise comparisions belonging to the same 
+replicate set</li>
+<li><code>recall_score</code> : similarity score of the pair of signatures. </li>
+<li><code>recall_rank</code> : The average percentile rank computed from the row-wise and 
+column-wise percentile ranks of the underlying pairwise similarity matrix.</li>
+<li><code>recall_composite</code> : A combined measure ranging [0, 1] derived from the recall 
+score and rank. Its computed as the geometric mean of clipped recall_score and 
+recall rank as follows:
+<code>recall_composite = sqrt(clip(recall_score, 0.001, inf).* (100 - 
+recall_rank)/100)</code></li>
+</ul>
+</li>
+<li>
+<p>recall_report_sets.txt : A replicate set level report listing aggregate 
+statistics for each unique recall_group derived from the metrics listed above.</p>
+</li>
+<li>
+<p>recall_summary.txt : A summary of recall of all replicate sets in a dataset 
+group. In addition lists the presence and identity of outlier datasets.</p>
+</li>
+<li>
+<p>recall_report_datasets.txt : Recall statistics for each dataset belonging to 
+a dataset group. In addition the recall ranks associated with each dataset are 
+compared with each other for outliers.</p>
+</li>
+</ol>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Compute recall using Spearman correlation</li>
+</ul>
+<p><code>sig_recall_tool --ds_list '/list/of/datasets' --metric 'spearman'</code> </p>
+<ul>
+<li>Compute recall using Two-tailed weighted Enrichment with a set size of 50</li>
+</ul>
+<p><code>sig_recall_tool --ds_list '/list/of/datasets' --metric 'wtcs' --set_size 50</code></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../sig_introspect_tool/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                introspect
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../sig_gutc_tool/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                gutc
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Connectivity Map
+          </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
