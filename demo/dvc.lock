@@ -1,6 +1,0 @@
-extract_data:
-  cmd: tar pxvf cmap-sigtool-demo.tar.xz
-  deps:
-  - path: cmap-sigtool-demo.tar.xz
-    md5: a55dff23b8bdda9db8f749fba28fbe8d
-    size: 1409217176
