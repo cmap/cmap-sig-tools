@@ -1,0 +1,10 @@
+md5: c87115b7a42b7c639a0bbcf4da70eff7
+frozen: true
+deps:
+- etag: 4d89480dcbc3d06f1584e01f2ad7f09b-168
+  size: 1409217176
+  path: s3://assets.clue.io/sigtool-demo/cmap-sigtool-demo.tar.xz
+outs:
+- md5: a55dff23b8bdda9db8f749fba28fbe8d
+  size: 1409217176
+  path: cmap-sigtool-demo.tar.xz
