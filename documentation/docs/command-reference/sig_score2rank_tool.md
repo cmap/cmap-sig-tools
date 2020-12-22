@@ -1,13 +1,13 @@
 # sig_score2rank_tool
 Generate rank matrix from score matrix
 
-## Synopsis:
+## Synopsis
 `sig_score2rank_tool` [--ds DS] [--outfile 
 OUTFILE] [--dim DIM] [--sort_order SORT_ORDER] [--ignore_nan IGNORE_NAN] [--as_fraction 
 AS_FRACTION] [--as_percentile AS_PERCENTILE] [--fix_ties FIX_TIES] [--use_gctx USE_GCTX] 
 [--read_mode READ_MODE] [--block_size BLOCK_SIZE]
 
-## Arguments:
+## Arguments
 
 `--ds` *DS*
 : Input score matrix to compute ranks
@@ -16,7 +16,7 @@ AS_FRACTION] [--as_percentile AS_PERCENTILE] [--fix_ties FIX_TIES] [--use_gctx U
 : Output filename of rank matrix.
 
 `--dim` *DIM*
-: Dimension to operate on.. Default is column. Options are {column|row}
+: Dimension to operate on. Default is column. Options are {column|row}
 
 `--sort_order` *SORT_ORDER*
 : Sort order. Default is descend. Options are {descend|ascend}
@@ -31,7 +31,7 @@ AS_FRACTION] [--as_percentile AS_PERCENTILE] [--fix_ties FIX_TIES] [--use_gctx U
 : Logical, returns ranks as a percentile of total rows. Default is 0
 
 `--fix_ties` *FIX_TIES*
-: Logical, adjusts for ties (is false by default).. Default is 0
+: Logical, adjusts for ties (is false by default). Default is 0
 
 `--use_gctx` *USE_GCTX*
 : Use GCTX file format. Default is 1
@@ -44,14 +44,14 @@ blocks. Default is full. Options are {full|iterative}
 `--block_size` *BLOCK_SIZE*
 : size of blocks to process if the read_mode is iterative. Default is 50000
 
-## Description:
+## Description
+Rank orders the input dataset along dimension `dim` in the order specified by `sort_order`. The rank matrix is used by connectivity analysis tools such as queryl1k to speed up the computation of enrichment based similarities.
  
+## Examples
  
-## Examples:
- 
-% Calculate ranks of input score matrix
- 
-sig_score2rank_tool('--ds', 'raw_data.gctx');
+- Calculate ranks of input score matrix
+
+`sig_score2rank_tool --ds 'raw_data.gctx'`
  
  
 

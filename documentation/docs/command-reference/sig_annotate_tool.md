@@ -1,11 +1,11 @@
 # sig_annotate_tool
 Read or modify metadata for a dataset
 
-## Synopsis:
+## Synopsis
 `sig_annotate_tool` [--ds DS] [--row_meta 
 ROW_META] [--column_meta COLUMN_META] [--strip_matrix STRIP_MATRIX]
 
-## Arguments:
+## Arguments
 
 `--ds` *DS*
 : Dataset in GCT or GCTX format
@@ -22,22 +22,21 @@ match the column ids in the dataset
 : If selected will output the original matrix with the specified annotations 
 removed.. Default is none. Options are {row|column|both|none}
 
-## Description:
+## Description
 This tool extracts annotations of rows and columns from a dataset.
  
-## Example:
+## Example
+- Extract row and column annotations from a dataset
  
-% Extract row and column annotations from a dataset
+`sig_annotate_tool --ds 'data.gctx'`
  
-sig_annotate_tool --ds 'data.gctx'
+- Update row and column annotations
  
-% Update row and column annotations
+`sig_annotate_tool --ds 'data.gctx' --row_meta 'row_meta.tsv' --column_meta 'column_meta.tsv'`
  
-sig_annotate_tool --ds 'data.gctx' --row_meta 'row_meta.tsv' --column_meta 'column_meta.tsv'
+- Remove matrix column annotations
  
-% Remove matrix column annotations
- 
-sig_annotate_tool --ds 'data.gctx' --strip_matrix 'column'
+`sig_annotate_tool --ds 'data.gctx' --strip_matrix 'column'`
  
  
 

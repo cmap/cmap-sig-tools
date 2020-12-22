@@ -1,14 +1,14 @@
 # sig_introspect_tool
 Compute internal connectivities between signatures
 
-## Synopsis:
+## Synopsis
 `sig_introspect_tool` [--sig_score SIG_SCORE] 
 [--sig_rank SIG_RANK] [--sig_connectivity SIG_CONNECTIVITY] [--sig_col_meta SIG_COL_META] 
 [--bkg_connectivity BKG_CONNECTIVITY] [--bkg_row_meta BKG_ROW_META] [--gset_size 
 GSET_SIZE] [--metric METRIC] [--es_tail ES_TAIL] [--rid RID] [--row_space ROW_SPACE] 
 [--symmetricize_result SYMMETRICIZE_RESULT] [--max_el MAX_EL] [--use_gctx USE_GCTX]
 
-## Arguments:
+## Arguments
 
 `--sig_score` *SIG_SCORE*
 : Input signature scores
@@ -64,7 +64,7 @@ transpose.. Default is 1. Options are {1,0}
 : Save results in binary GCTX format if true, text GCT format if false. Default 
 is 1
 
-## Description:
+## Description
 The introspect analysis examines the similarities between a group of gene 
 expression signatures. It takes a matrix of signatures as input and computes 
 similarities between, them adjusting the strength of connectivities using all 
@@ -78,18 +78,19 @@ i.e. adjusted for co-variates of perturbagen type and cell line identity.
 Finally the scores are converted to percentile scores using a user-specified 
 signature set as a null distribution.
  
-## Examples: 
+## Examples
 
-% Run introspect using the signature matrix as the background 
-sig_introspect_tool('--sig_score', 'sig_zscore.gct')
+- Run introspect using the signature matrix as the background 
+
+`sig_introspect_tool --sig_score 'sig_zscore.gct'`
  
-% Run introspect using a pre-computed background 
-sig_introspect_tool('--sig_score', 'sig_zscore.gct', '--bkg_connectivity', 
-'bkg_wtcs.gct')
+- Run introspect using a pre-computed background 
+
+`sig_introspect_tool --sig_score 'sig_zscore.gct --bkg_connectivity 'bkg_wtcs.gct'`
  
-% Run introspect using pre-computed introspect and background results 
-sig_introspect_tool('--sig_connectivity', 'sig_wtcs.gct', '--bkg_connectivity', 
-'bkg_wtcs.gct')
+- Run introspect using pre-computed introspect and background results 
+
+`sig_introspect_tool --sig_connectivity 'sig_wtcs.gct' --bkg_connectivity 'bkg_wtcs.gct'`
  
  
 

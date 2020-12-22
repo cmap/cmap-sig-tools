@@ -1,12 +1,12 @@
 # sig_pca_tool
 Perform Principal Components Analysis on a dataset
 
-## Synopsis:
+## Synopsis
 `sig_pca_tool` [--ds DS] [--ds_meta DS_META] 
 [--sample_dim SAMPLE_DIM] [--cid CID] [--rid RID] [--row_space ROW_SPACE] 
 [--disable_table DISABLE_TABLE]
 
-## Arguments:
+## Arguments
 
 `--ds` *DS*
 : Input dataset
@@ -36,19 +36,18 @@ Default is all. Options are
 : Disable generating annotated text table for first two components. The table can 
 be generated post-hoc from the saved pc_score matrix if needed.. Default is 0
 
-## Description:
+## Description
 This tool applies Principal Components Analysis (PCA) on raw data.
  
-## Examples:
+## Examples
  
-% Apply PCA on columns of a matrix
+- Apply PCA on columns of a matrix
  
-sig_pca_tool('--ds', 'raw_data.gctx');
+`sig_pca_tool --ds 'raw_data.gctx'`
  
-% Merge datasets from a list of folders
+- Merge datasets from a list of folders
  
-sig_pca_tool('--folders', 'folders.grp', '--cid', 'columns.grp', '--row_space', 
-'lm')
+`sig_pca_tool --folders 'folders.grp' --cid 'columns.grp' --row_space 'lm'`
  
  
 

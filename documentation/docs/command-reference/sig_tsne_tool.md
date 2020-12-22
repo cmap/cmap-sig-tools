@@ -1,14 +1,14 @@
 # sig_tsne_tool
 Run T-SNE on a dataset
 
-## Synopsis:
+## Synopsis
 `sig_tsne_tool` [--ds DS] [--ds_meta DS_META] 
 [--is_pairwise IS_PAIRWISE] [--cid CID] [--rid RID] [--row_space ROW_SPACE] [--sample_dim 
 SAMPLE_DIM] [--out_dim OUT_DIM] [--algorithm ALGORITHM] [--initial_dim INITIAL_DIM] 
 [--perplexity PERPLEXITY] [--theta THETA] [--missing_action MISSING_ACTION] 
 [--missing_fill_value MISSING_FILL_VALUE] [--disable_table DISABLE_TABLE]
 
-## Arguments:
+## Arguments
 
 `--ds` *DS*
 : Input dataset
@@ -87,7 +87,7 @@ missing_action. Default is 0
 table can be generated post-hoc from the saved tsne.gctx matrix if needed.. 
 Default is 0
 
-## Description:
+## Description
 Applies t-distributed stochastic neighbor embedding (t-SNE) to high dimensional 
 datasets and returns a 2-d mapping of datapoints. t-SNE is a dimensionality 
 reduction technique that is particularly well suited for visualization of high 
@@ -98,15 +98,15 @@ larger datasets the Barnes-HUT algorithm is employed.
  
 For details see http://homepage.tudelft.nl/19j49/t-SNE.html
  
-## Examples:
+## Examples
  
-% tSNE with default parameters
+- tSNE with default parameters
  
-sig_tsne_tool('ds', x.gctx)
+`sig_tsne_tool --ds 'x.gctx`
  
-% tSNE along rows of a large dataset with >5000 rows
+- tSNE along rows of a large dataset with >5000 rows
  
-sig_tsne_tool('ds', large.gctx, 'dim', 'row', 'algorithm', 'barnes-hut')
+`sig_tsne_tool --ds 'large.gctx' --dim row --algorithm barnes-hut`
  
  
 

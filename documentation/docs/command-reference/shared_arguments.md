@@ -1,13 +1,13 @@
 # Shared Arguments
 These arguments are common to all tools
 
-## Synopsis:
+## Synopsis
 
 `sig_*_tool` [--help, -h] [--undef_action UNDEF_ACTION] [-o, --out OUT] [--runtests]
 [--rundemo] [--rpt RPT] [--create_subdir CREATE_SUBDIR] [--verbose VERBOSE] [--encode_url
 ENCODE_URL] [--config CONFIG] 
 
-## Arguments:
+## Arguments
 
 `--help, -h`
 : Show this help message and exit

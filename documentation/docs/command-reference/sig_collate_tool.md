@@ -1,7 +1,7 @@
 # sig_collate_tool
 Merge datasets
 
-## Synopsis:
+## Synopsis
 `sig_collate_tool` [--files FILES] 
 [--folders FOLDERS] [--file_wildcard FILE_WILDCARD] [--parent_folder PARENT_FOLDER] 
 [--sub_folder SUB_FOLDER] [--row_space ROW_SPACE] [--rid RID] [--cid CID] [--exclude_rid 
@@ -9,9 +9,8 @@ EXCLUDE_RID] [--exclude_cid EXCLUDE_CID] [--use_gctx USE_GCTX] [--use_compressio
 USE_COMPRESSION] [--block_size BLOCK_SIZE] [--merge_partial MERGE_PARTIAL] 
 [--missing_value MISSING_VALUE]
 
-## Positional Arguments:
+## Arguments
 
-## Optional Arguments:
 `--help, -h`
 : Show this help message and exit
 
@@ -94,22 +93,22 @@ excluded if exclude_cid is true
 `--missing_value` *MISSING_VALUE*
 : Number of files to read before writing output to disk. Default is nan
 
-## Description:
+## Description
 This tool merges a list of datasets.
  
-## Examples:
+## Examples
  
-% Merge a list of files
+- Merge a list of files
  
-sig_collate_tool --files 'dslist.grp' --row_space 'lm');
+`sig_collate_tool --files 'dslist.grp' --row_space lm`
  
-% Merge datasets from a list of folders
+- Merge datasets from a list of folders
  
-sig_collate_tool --folders 'folders.grp' --cid 'columns.grp' --row_space 'lm'
+`sig_collate_tool --folders 'folders.grp' --cid 'columns.grp' --row_space 'lm'`
  
-% Merge files names score_n*.gctx from a subfolder zs/ within a list of folders
+- Merge files names score_n*.gctx from a subfolder zs/ within a list of folders
  
-sig_collate_tool --folders 'folders.grp' --file_wildcard 'score_n*.gctx' --sub_path 'zs/'
+`sig_collate_tool --folders 'folders.grp' --file_wildcard 'score_n*.gctx' --sub_path 'zs/'`
  
  
 

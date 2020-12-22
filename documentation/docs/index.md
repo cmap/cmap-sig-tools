@@ -1,6 +1,3 @@
-## Documentation for software tools used in Connectivity Map Project
+This page provides documentation for analysis tools developed by the Connectivity Map Project at the [Broad Institute](https://www.broadinstitute.org). The focus of the CMap project is to create and analyze large perturbational datasets to aid our understanding of human disease and to accelerate the discovery of novel therapeutics. To learn more about CMap visit [clue.io](https://clue.io)
 
-
-
-**Citation:**
-Subramanian, A. et al. A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles. Cell 171, 1437–1452.e17 (2017)
+---

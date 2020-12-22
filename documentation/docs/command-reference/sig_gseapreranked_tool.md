@@ -1,13 +1,13 @@
 # sig_gseapreranked_tool
 Run pre-ranked GSEA on a ranked matrix
 
-## Synopsis:
+## Synopsis
 `sig_gseapreranked_tool` [--up, --uptag UP] 
 [--score SCORE] [--rank RANK] [--sig_meta SIG_META] [--metric METRIC] [--es_tail ES_TAIL] 
 [--num_perm NUM_PERM] [--query_meta QUERY_META] [--save_minimal SAVE_MINIMAL] 
 [--save_digests SAVE_DIGESTS] [--max_col MAX_COL]
 
-## Arguments:
+## Arguments
 
 `--up, --uptag` *UP*
 : Geneset(s) to use for the up portion of the query
@@ -48,18 +48,15 @@ metrics only the combined scores are saved. Default is 1
 : Maximum number of columns of the score/rank matrices to read at a time. Default 
 is 25000
 
-## Description:
+## Description
 The tool computes set-based enrichment analysis against a user-defined 
 rank-ordered dataset.  It determines whether a priori defined sets show 
 statistically significant enrichment at either end of the ranking.
  
-## Examples:
+## Examples
  
-% Run preRanked GSEA
+- Run preRanked GSEA
  
-sig_gseapreranked_tool --up 'up.gmt' --score 'score.gctx'
+`sig_gseapreranked_tool --up 'up.gmt' --score 'score.gctx'`
  
-**Citation**: Subramanian, A., et al. Gene set enrichment analysis: a 
-knowledge-based approach for interpreting genome-wide expression profiles. PNAS 
-(2005).
 

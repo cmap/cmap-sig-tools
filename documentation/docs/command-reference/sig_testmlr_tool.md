@@ -1,11 +1,11 @@
 # sig_testmlr_tool
 Apply given model to predict genes using multiple linear regression.
 
-## Synopsis:
+## Synopsis
 `sig_testmlr_tool` [--ds DS] [--model MODEL] 
 [--minval MINVAL] [--maxval MAXVAL] [--use_gctx USE_GCTX] [--xform XFORM]
 
-## Arguments:
+## Arguments
 `--help, -h`
 : Show this help message and exit
 
@@ -62,7 +62,7 @@ value. Default is 15
 : String. Specify any transformations to apply to data prior to training. Default 
 is none. Options are {none|log2|abs|pow2|zscore}
 
-## Description:
+## Description
  The sig_testmlr_tool takes as input a test dataset (genes x samples) minimally 
 containing all landmark genes and an MLR model (output by SIG_TRAINMLR_TOOL) 
 and output inferred values for dependent genes by applying the model. Note that 
@@ -72,16 +72,15 @@ expression as input to the model. The --xform argument can be optionally
 specified to transform the input data. The output is saved as a GCTX file with 
 the inferred dependent genes appended to the original landmark data.
  
-## Examples:
+## Examples
  
-% Apply model to landmark data.
+- Apply model to landmark data.
  
-sig_testmlr_tool('ds', 'test_data.gctx', 'model', '/filepath/model.gctx');
+`sig_testmlr_tool --ds 'test_data.gctx' --model '/filepath/model.gctx'`
  
-% Apply model to landmark data retricting the minimum value in the output to 2.
+- Apply model to landmark data retricting the minimum value in the output to 2.
  
-sig_testmlr_tool('ds', 'test_data.gctx', 'model', '/filepath/model.gctx', 
-'minval', 2);
+`sig_testmlr_tool --ds 'test_data.gctx' --model '/filepath/model.gctx' --minval 2`
  
  
 

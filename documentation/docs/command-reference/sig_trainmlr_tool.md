@@ -6,7 +6,7 @@ Create a model given a training dataset using multilinear regression.
 MODELTYPE] [--grp_landmark GRP_LANDMARK] [--dependents DEPENDENTS] [--cid CID] [--xform 
 XFORM] [--precision PRECISION] [--outfmt OUTFMT]
 
-## Arguments:
+## Arguments
 
 `--ds` *DS*
 : Input dataset that includes both landmarks and resulting outputs.
@@ -39,29 +39,27 @@ is 6
 `--outfmt` *OUTFMT*
 : Model Output format. Default is gctx. Options are {mat|gct|gctx}
 
-## Description:
- sig_trainmlr_tool takes as input a training dataset (genes x samples) 
+## Description
+This tool takes as input a training dataset (genes x samples) 
 containing expression values for a specified set of predictor (landmark) genes 
 and some number of dependent genes and builds a multiple linear regression 
 (MLR) model. The model can be applied to a new dataset using the 
 SIG_TESTMLR_TOOL to infer the expression of the dependent genes based on 
 landmark expression.
  
-## Examples:
+## Examples
  
-% Create a model from training data and landmark GRP file.
+- Create a model from training data and landmark GRP file.
  
-sig_trainmlr_tool('ds', 'training_data.gctx', 'grp_landmark', 'landmark.grp');
+`sig_trainmlr_tool --ds 'training_data.gctx' --grp_landmark 'landmark.grp'`
  
-% Create a model for a subset of dependent genes.
+- Create a model for a subset of dependent genes.
  
-sig_trainmlr_tool('ds', 'training_data.gctx', 'grp_landmark', 'landmark.grp', 
-'dependents', 'subset.grp');
+`sig_trainmlr_tool --ds 'training_data.gctx' --grp_landmark 'landmark.grp' --dependents 'subset.grp'`
  
-% Perform z-scoring prior to creating model.
+- Perform z-scoring prior to creating model.
  
-sig_trainmlr_tool('ds', 'training_data.gctx', 'grp_landmark', 'landmark.grp', 
-'xform', 'zscore');
+`sig_trainmlr_tool --ds 'training_data.gctx' --grp_landmark 'landmark.grp' --xform 'zscore'`
  
  
 

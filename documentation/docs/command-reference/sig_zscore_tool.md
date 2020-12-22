@@ -1,14 +1,12 @@
 # sig_zscore_tool
 Compute robust and conventional standardized scores
 
-## Synopsis:
+## Synopsis
 `sig_zscore_tool` [--ds DS] [--dim DIM] [--bkg_space 
 BKG_SPACE] [--min_var MIN_VAR] [--var_adjustment VAR_ADJUSTMENT] [--estimate_prct 
 ESTIMATE_PRCT] [--zscore_method ZSCORE_METHOD] [--use_gctx USE_GCTX]
 
-## Positional Arguments:
-
-## Optional Arguments:
+## Arguments
 
 `--ds` *DS*
 : Path to input dataset
@@ -53,7 +51,7 @@ NANSTD(X). Default is robust. Options are {robust|standard}
 : Save file in binary GCTX format if 1 else save as a text GCT. Default is 1. 
 Options are {1,0}
 
-## Description:
+## Description
  The sig_zscore_tool returns a z-scored version on the input matrix X, the same 
 dimensions as X. Two methods for computing Z-scores are currently supported. 
 The default is to compute a robust z-score as: 
@@ -62,16 +60,15 @@ specified and is computed as: (X-NANMEAN(X))./ NANSTD(X). In addition
 adjustments are made to account for low variance based on heuristics controlled 
 via the var_adjustment parameter.
  
-## Examples:
+## Examples
  
-% Run row-wise z-scoring using the entire dataset
+- Run row-wise z-scoring using the entire dataset
  
-sig_zscore_tool('--ds', 'raw_data.gctx');
+`sig_zscore_tool --ds 'raw_data.gctx'`
  
-% Run column-wise z-scoring using a custom background space
+- Run column-wise z-scoring using a custom background space
  
-sig_zscore_tool('--ds', 'raw_data.gctx', '--dim', 'column', '--bkg_space', 
-'rowids.grp');
+`sig_zscore_tool --ds 'raw_data.gctx' --dim 'column' --bkg_space 'rowids.grp'`
  
  
 

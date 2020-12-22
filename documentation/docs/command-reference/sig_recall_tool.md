@@ -13,19 +13,22 @@ RECALL_GROUP_PREFIX] [--outlier_alpha OUTLIER_ALPHA] [--fix_ties FIX_TIES]
 `--ds_list` *DS_LIST*
 : List of datasets to compare.
 A single replicate set can be specified as a GRP file or cell array listing the 
-full filepath to a dataset per line.
-Multiple replicate sets can be specified by supplying a TSV text file with the 
+full filepath to a dataset per line. Multiple replicate sets can be specified by supplying a TSV text file with the 
 following columns:
-'group_id' : Grouping variable shared by all datasets in a replicate set 
-'file_path' : Full filepath to a dataset.
+
+`group_id`: *Grouping variable shared by all datasets in a replicate set*
+
+`file_path`: *Full filepath to a dataset*
+
 For example to run recall on two replicate sets A and B use:
 
-group_id    file_path
-A   /path/to/DS_A_X1.gct
-A   /path/to/DS_A_X2.gctx
-A   /path/to/DS_A_X3.gct
-B   /path/to/DS_B_X1.gctx
-B   /path/to/DS_B_X2.gct
+|group_id |   file_path|
+|---|---|
+|A|/path/to/DS_A_X1.gct|
+|A|/path/to/DS_A_X2.gctx|
+|A| /path/to/DS_A_X3.gct|
+|B|/path/to/DS_B_X1.gctx|
+|B|/path/to/DS_B_X2.gct|
 
 Any replicate set with singleton entries will be ignored. A list of skipped 
 replicate sets is output to a file named ds_skipped.grp 
@@ -76,7 +79,7 @@ comparisons.. Default is 0
 `--fix_ties` *FIX_TIES*
 : Adjusts for ties in the recall score when computing ranks if true. Default is 1
 
-## Description:
+## Description
 For a grouped collection of datasets (a dataset group), the recall tool 
 computes pairwise similarities between each pair of datasets in the group using 
 the specified metric and dimension. In the case of non-symmetric enrichment 
@@ -101,21 +104,17 @@ text reports are generated for each dataset group:
 information of the analysis and lists the recall scores and ranks of every pair 
 of profiles compared in addition to the corresponding metadata. The key recall 
 fields are:
- 
-recall_group : indicates the pairwise comparisions belonging to the same 
-replicate set
- 
-recall_score : similarity score of the pair of signatures.
- 
-recall_rank : The average percentile rank computed from the row-wise and 
-column-wise percentile ranks of the underlying pairwise similarity matrix.
- 
-recall_composite : A combined measure ranging [0, 1] derived from the recall 
-score and rank. Its computed as the geometric mean of clipped recall_score and 
-recall rank as follows:
- 
-recall_composite = sqrt(clip(recall_score, 0.001, inf).* (100 - 
-recall_rank)/100);
+
+    - `recall_group` : indicates the pairwise comparisions belonging to the same 
+    replicate set
+    - `recall_score` : similarity score of the pair of signatures. 
+    - `recall_rank` : The average percentile rank computed from the row-wise and 
+    column-wise percentile ranks of the underlying pairwise similarity matrix.
+    - `recall_composite` : A combined measure ranging [0, 1] derived from the recall 
+    score and rank. Its computed as the geometric mean of clipped recall_score and 
+    recall rank as follows:
+    `recall_composite = sqrt(clip(recall_score, 0.001, inf).* (100 - 
+    recall_rank)/100)`
  
 2. recall_report_sets.txt : A replicate set level report listing aggregate 
 statistics for each unique recall_group derived from the metrics listed above.
@@ -127,16 +126,15 @@ group. In addition lists the presence and identity of outlier datasets.
 a dataset group. In addition the recall ranks associated with each dataset are 
 compared with each other for outliers.
  
-## Examples:
+## Examples
  
-% Compute recall using Spearman correlation
+- Compute recall using Spearman correlation
  
-sig_recall_tool('--ds_list', '/list/of/datasets', '--metric', 'spearman');
+`sig_recall_tool --ds_list '/list/of/datasets' --metric 'spearman'` 
+
+- Compute recall using Two-tailed weighted Enrichment with a set size of 50
  
-% Compute recall using Two-tailed weighted Enrichment with a set size of 50
- 
-sig_recall_tool('--ds_list', '/list/of/datasets', '--metric', 'wtcs', 
-'--set_size', 50);
+`sig_recall_tool --ds_list '/list/of/datasets' --metric 'wtcs' --set_size 50`
  
  
 

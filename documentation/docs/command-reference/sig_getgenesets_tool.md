@@ -56,7 +56,7 @@ duplicate entries. Set to false to disable this constraint.. Default is 1
 : Integer, minimum set size. Sets with fewer members are excluded from the 
 ouput.. Default is 0
 
-## Description:
+## Description
  
 Returns the top and bottom N genesets for the score dataset DS sorted according 
 to --sort_order. SORTORDER can be 'descend' or 'ascend'. UP and DN are 
@@ -70,21 +70,19 @@ Each row in the structure has the the following fields: hd : String header,
 same as the column id in DS with either '_UP' or '_DN' appended. desc :  String 
 descriptor. Set to ''. entry : Cell array of N row identifiers in DS.
  
-## Examples:
+## Examples
  
-% Get top and bottom 50 genes of each column in given dataset
+- Get top and bottom 50 genes of each column in given dataset
  
-sig_getgenesets_tool('--ds', 'raw_data.gctx', '--set_size', 50);
+`sig_getgenesets_tool --ds 'raw_data.gctx' --set_size 50`
+
+- Get top and bottom 50 landmark genes of each column in given gene id dataset
  
-% Get top and bottom 50 landmark genes of each column in given gene id dataset
+`sig_getgenesets_tool --ds 'raw_data.gctx' --set_size 50 --row_space lm`
+
+- Get top and bottom 50 landmark genes of each column in given affy id dataset
  
-sig_getgenesets_tool('--ds', 'raw_data.gctx', '--set_size', 50, '--row_space', 
-'lm');
- 
-% Get top and bottom 50 landmark genes of each column in given affy id dataset
- 
-sig_getgenesets_tool('--ds', 'raw_data.gctx', '--set_size', 50, '--row_space', 
-'lm_probeset');
+`sig_getgenesets_tool --ds 'raw_data.gctx' --set_size 50 --row_space lm_probeset`
  
  
 

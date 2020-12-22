@@ -1,7 +1,7 @@
 # sig_gutc_tool
-Compute similarity of input queries to CMap perturbagens
+Compute similarity of input queries to CMap perturbagens, adjusting the results w.r.t to a background distribution
 
-## Synopsis:
+## Synopsis
 `sig_gutc_tool` [--query_result QUERY_RESULT] [--up, 
 --uptag UP] [--down, --dntag DOWN] [--query_meta QUERY_META] [--is_matched IS_MATCHED] 
 [--match_group MATCH_GROUP] [--metric METRIC] [--es_tail ES_TAIL] [--score SCORE] [--rank 
@@ -75,7 +75,7 @@ Options are {lm|bing|full}
 `--save_digests` *SAVE_DIGESTS*
 : Save per-query digest folders. Default is 1
 
-## Description:
+## Description
 Sig GUTC computes the similarity between input genesets (queries) and 
 perturbational gene expression signatures in the CMap database. The results are 
 transformed to a percentile scale and reported at different levels of 
@@ -115,24 +115,23 @@ per cell-line for each unique [pert_id, pert_idose, pert_itime] combination.
 The default query grouping variables can be changed using the match_group 
 argument.
  
-## Examples:
+## Examples
  
-% Run queries and apply GUTC
+- Run queries and apply GUTC
  
-sig_gutc_tool('--up', 'up.gmt', '--down', 'down.gmt')
+`sig_gutc_tool --up 'up.gmt' --down 'down.gmt'`
  
-% Apply GUTC on pre-computed query results
+- Apply GUTC on pre-computed query results
  
-sig_gutc_tool('--query_result', '/path/to/sig_query/results/wtcs.gctx')
+`sig_gutc_tool --query_result '/path/to/sig_query/results/wtcs.gctx'`
  
-% Run GUTC in cell-line matched mode
+- Run GUTC in cell-line matched mode
  
-sig_gutc_tool('--query_result', '/path/to/sig_query/results/wtcs.gctx', 
-'--query_meta', '/path/to/query_info.txt', '--is_matched', true)
+`sig_gutc_tool --query_result '/path/to/sig_query/results/wtcs.gctx' --query_meta '/path/to/query_info.txt' --is_matched true`
  
-% Run GUTC using a custom dataset, Expects that sig_gutc_tool('--bkg_path', 
-'/path/to/gutc_background', '--score', '/path/to/modzs.gctx', '--rank', 
-'/path/to/rank.gctx', '--up', 'up.gmt', '--down', 'down.gmt')
+- Run GUTC using a custom dataset, Expects that 
+
+`sig_gutc_tool --bkg_path '/path/to/gutc_background' --score '/path/to/modzs.gctx' --rank '/path/to/rank.gctx' --up 'up.gmt' --down 'down.gmt'`
  
  
 

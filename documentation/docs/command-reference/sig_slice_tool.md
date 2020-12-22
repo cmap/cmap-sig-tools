@@ -1,14 +1,12 @@
 # SigSliceTool
 Extract a subset from a larger dataset
 
-## Synopsis:
+## Synopsis
 `SigSliceTool` [--ds DS] [--cid CID] [--rid RID] 
 [--row_space ROW_SPACE] [--row_meta ROW_META] [--col_meta COL_META] [--use_gctx USE_GCTX] 
 [--num_digits NUM_DIGITS] [--ignore_missing IGNORE_MISSING]
 
-## Positional Arguments:
-
-## Optional Arguments:
+## Arguments
 
 `--ds` *DS*
 : Dataset in GCT or GCTX format
@@ -43,19 +41,18 @@ column-ids
 : If false, program will fail when missing any specified rids or cids. Default is 
 0
 
-## Description:
+## Description
 This tool extracts a subset of rows and columns from a larger dataset.
  
-## Examples:
+## Examples
  
-% Extract a subset of columns from a larger dataset
+- Extract a subset of columns from a larger dataset
  
-SigSliceTool('--ds', 'data.gctx', '--cid', 'column_ids.grp', '--rid', 
-'row_ids.grp')
+`sig_slice_tool --ds 'data.gctx' --cid 'column_ids.grp' --rid 'row_ids.grp'`
  
-% Extract only landmark genes for a subset of columns
+- Extract only landmark genes for a subset of columns
  
-SigSliceTool('--ds', 'data.gctx', '--cid', 'columns.grp', '--row_space', 'lm')
+`sig_slice_tool --ds 'data.gctx' --cid 'columns.grp' --row_space lm`
  
  
 

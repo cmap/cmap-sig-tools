@@ -1,7 +1,7 @@
 # sig_marker_tool
 Identify differentially expressed genes using two-class marker selection.
 
-## Synopsis:
+## Synopsis
 `sig_marker_tool` [--ds DS] [--col_meta COL_META] 
 [--row_meta ROW_META] [--phenotype PHENOTYPE] [--metric METRIC] [--feature_space 
 FEATURE_SPACE] [--feature_id FEATURE_ID] [--ignore_missing_features 
@@ -9,7 +9,7 @@ IGNORE_MISSING_FEATURES] [--islog2 ISLOG2] [--nmarker NMARKER] [--fix_low_var
 FIX_LOW_VAR] [--min_sample_size MIN_SAMPLE_SIZE] [--use_gctx USE_GCTX] [--skip_rpt 
 SKIP_RPT] [--add_heatmap_fields ADD_HEATMAP_FIELDS]
 
-## Arguments:
+## Arguments
 
 `--ds` *DS*
 : Dataset of gene expression profiles [GCT or GCTX]
@@ -27,13 +27,15 @@ corresponds to column identifiers in the supplied dataset. The following
 convention is preferred class_id = A denotes the treatment class or class of 
 interest and class_id = B is the control class. The sig_id field specifies the 
 name of the output signature. Here is an example:
-sample_id	class_id	class_label	sig_id
- 	s1	A	Estradiol treatment	Estradiol vs DMSO treatment
- 	s2	A	Estradiol treatment	Estradiol vs DMSO treatment
- 	s3	A	Estradiol treatment	Estradiol vs DMSO treatment
- 	s4	B	DMSO treatment	Estradiol vs DMSO treatment
- 	s4	B	DMSO treatment	Estradiol vs DMSO treatment
- 	s6	B	DMSO treatment	Estradiol vs DMSO treatment
+
+|sample_id|	class_id|	class_label|	sig_id|
+|---|---|---|---|
+| 	s1|	A|	Estradiol treatment|	Estradiol vs DMSO treatment|
+| 	s2|	A|	Estradiol treatment|	Estradiol vs DMSO treatment|
+| 	s3|	A|	Estradiol treatment|	Estradiol vs DMSO treatment|
+| 	s4|	B|	DMSO treatment|	Estradiol vs DMSO treatment|
+| 	s4|	B|	DMSO treatment|	Estradiol vs DMSO treatment|
+| 	s6|	B|	DMSO treatment|	Estradiol vs DMSO treatment|
 
 
 `--metric` *METRIC*
@@ -87,7 +89,7 @@ Default is 1
 `--add_heatmap_fields` *ADD_HEATMAP_FIELDS*
 : Additional row metadata fields to include in the generated heatmap
 
-## Description:
+## Description
 sig_marker_tool compares the expression profiles of two predetermined classes, 
 computes differential expression scores and selects the most differentially 
 expressed features (markers).
@@ -95,9 +97,9 @@ expressed features (markers).
 Note data is assumed to be in log2 scale. For data in natural scale set the 
 --islog2 flag to transform the data before computing the scores.
  
-Examples:
+## Examples
  
-% Run marker selection on the expression datatset EXP_FILE for the classes 
+- Run marker selection on the expression datatset EXP_FILE for the classes 
 specified in CLASS_FILE
  
 sig_marker_tool('--ds', EXP_FILE, '--phenotype', CLASS_FILE)

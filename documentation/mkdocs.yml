@@ -1,28 +1,43 @@
+# Project information
 site_name: CMap SigTool Documentation
+site_author: Connectivity Map
+
+# Repository
+repo_name: cmap/cmap-sig-tools
+repo_url: https://github.com/cmap/cmap-sig-tools
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2020 Connectivity Map
+
 nav:
   - Home: index.md
-  - Man Pages:
-    - Shared arguments: shared_arguments.md
+  - Command Reference: 
+    - Shared arguments: command-reference/shared_arguments.md
     - Connectivity analysis:
-        curie: sig_curie_tool.md
-        gutc: sig_gutc_tool.md
-        gseapreranked: sig_gseapreranked_tool.md
-        introspect: sig_introspect_tool.md
-        queryl1k: sig_queryl1k_tool.md
-        recall: sig_recall_tool.md        
+        queryl1k: command-reference/sig_queryl1k_tool.md
+        gseapreranked: command-reference/sig_gseapreranked_tool.md
+        curie: command-reference/sig_curie_tool.md
+        introspect: command-reference/sig_introspect_tool.md
+        recall: command-reference/sig_recall_tool.md        
+        gutc: command-reference/sig_gutc_tool.md
     - Expression analysis:        
-        marker: sig_marker_tool.md
-        pca: sig_pca_tool.md
-        tsne: sig_tsne_tool.md
+        marker: command-reference/sig_marker_tool.md
+        pca: command-reference/sig_pca_tool.md
+        tsne: command-reference/sig_tsne_tool.md
     - Utilities:
-        annotate: sig_annotate_tool.md
-        collate: sig_collate_tool.md        
-        getgenesets: sig_getgenesets_tool.md        
-        score2rank: sig_score2rank_tool.md
-        slice: sig_slice_tool.md        
-        testmlr: sig_testmlr_tool.md
-        trainmlr: sig_trainmlr_tool.md        
-        zscore: sig_zscore_tool.md
+        annotate: command-reference/sig_annotate_tool.md
+        slice: command-reference/sig_slice_tool.md        
+        collate: command-reference/sig_collate_tool.md        
+        getgenesets: command-reference/sig_getgenesets_tool.md        
+        score2rank: command-reference/sig_score2rank_tool.md
+        testmlr: command-reference/sig_testmlr_tool.md
+        trainmlr: command-reference/sig_trainmlr_tool.md        
+        zscore: command-reference/sig_zscore_tool.md
+  - Tutorials:
+    - Running Dockerized SigTools: docker_demo.md 
+  - FAQ: faq.md
+ 
 theme:
   name: material
   custom_dir: overrides
@@ -30,4 +45,7 @@ theme:
   favicon: img/favicon.ico
   logo: img/banner-logo.svg
 extra:
-  generator: false  
+  generator: false 
+markdown_extensions:
+  - toc:
+      permalink: true
