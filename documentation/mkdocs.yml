@@ -35,7 +35,9 @@ nav:
         trainmlr: command-reference/sig_trainmlr_tool.md        
         zscore: command-reference/sig_zscore_tool.md
   - Tutorials:
-    - Running Dockerized SigTools: docker_demo.md 
+    - Running SigTools in MATLAB: matlab_demo.md
+    - Running SigTools with Docker: docker_demo.md 
+
   - FAQ: faq.md
  
 theme:
@@ -49,3 +51,5 @@ extra:
 markdown_extensions:
   - toc:
       permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
