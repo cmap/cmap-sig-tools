@@ -9,13 +9,13 @@ Sig Tools provide a reference implementation of core CMap algorithms and facilit
 ## What SigTools are available?
 The Command Reference enumerates the currently available tools organized by function.
 
-## Can I run SigTools w/o configuring a custom analysis environment or access to to Matlab?
+## Can I run SigTools w/o configuring a custom analysis environment or access to to MATLAB?
 
-We provide Docker [images](https://hub.docker.com/search?q=sig_&type=image) of the sig-tools at DockerHub. These images come pre-configured with all the software dependencies of the tool execute without requiring commercial licences. See [here](docker_demo.md) for a tutorial on how to run custom analyses using Dockerized SigTools.
+We provide Docker [images](https://hub.docker.com/search?q=sig_&type=image) of the sig-tools at DockerHub. These images come pre-configured with all the software dependencies of the tool execute without requiring commercial licences. See [here](docker_demo.md) for a tutorial on how to run connectivity analyses using Dockerized SigTools.
 
 ## Where can I find the source code for sig-tools?
 
-The source code for all Matlab based SigTools is available in the [cmapM](https://github.com/cmap/cmapM) Github repository. 
+The source code for all MATLAB based SigTools is available in the [cmapM](https://github.com/cmap/cmapM) Github repository. See [here](matlab_demo.md) for a tutorial on how to run connectivity analyses in MATLAB.
 
 ## How should should I cite these tools in my research?
 
