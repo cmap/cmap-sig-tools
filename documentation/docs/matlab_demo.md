@@ -3,7 +3,7 @@
 SigTools are command-line programs that allow easy execution of core CMap algorithms and methods via a standardized user interface. 
 
 This tutorial demonstrates running connectivity analyses on custom datasets in MATLAB using the source code available 
-in the [cmapM](https://github.com/cmapM) Github repository.
+in the [cmapM](https://github.com/cmap/cmapM) Github repository.
 
 
 We also provide Docker images of the SigTools via DockerHub. 

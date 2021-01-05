@@ -1,0 +1,11 @@
+# demo assets in a separate bundle
+demo/results
+demo/cmap
+demo/datasets
+# static website
+documentation/site
+
+# scratch files
+*#
+*~
+\.#*
